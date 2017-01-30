@@ -1,0 +1,12 @@
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div class="col-md-12 text-align name-form">
+            {{form.label}}
+            <input type="text" ng-model="form.name" key-enter="go()" class="form-container full" placeholder="Enter name here">
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-disabled="checkName()" ng-click="go()">Go!</button>
+</div>

@@ -1,0 +1,22 @@
+<div class="chat-window">
+    <div class="row" >
+    <div class="col-md-8 text-align">
+        <h1>Chitchat with {{userName}}</h1>
+        <div class="chat-body" scroll-bottom="chat.postMsg">
+          <div ng-repeat="msg in chat.postMsg track by $index">
+            <div class="chatMessage" style="text-align:left">
+              <div class="messageTextInMessage">{{msg}}</div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="row chat">
+        <div class="col-md-7">
+            <input type="text" ng-model="chat.msg" key-enter="sendMessage()" placeholder="Message">
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-success"  ng-disabled="checkMessage()" ng-click="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
